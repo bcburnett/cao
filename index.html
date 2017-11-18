@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meat Item Number Reference</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" href="./css/jquery.e-calendar.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <div class="container" id="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <a class="navbar-brand" id="info">OOC</a>
+            <div>
+                <button
+                    class="btn btn-lg"
+                    onclick="getooc()"
+                    data-toggle="tooltip"
+                    title="Display OOC List">
+                    OOC
+                </button>
+
+                <button
+                    class="btn btn-lg"
+                    onclick="gettodo() "
+                    data-toggle="tooltip"
+                    title="Display To Do List">
+                    ToDo
+                </button>
+
+                <button
+                    class="btn btn-lg"
+                    onclick="inputform()"
+                    data-toggle="tooltip"
+                    title="Add a New Record">
+                    ADD
+                </button>
+
+                <button
+                    class="btn btn-lg"
+                    onclick="$('html,body').scrollTop(0);
+                                  $('.expandable').slideToggle('fast')"
+                    data-toggle="tooltip"
+                    title="Expand Divs">
+                    ++
+                </button>
+
+                    <input id="txt"
+                        placeholder="Search"
+                        name="search"
+                        Size="5"
+                        data-toggle="tooltip"
+                        title="Enter an Item or Ordercode to search for">
+
+                    <button  id="Clear"
+                        class="btn btn-lg"
+                        onclick="$('#txt').val('')"
+                        data-toggle="tooltip"
+                        title="Clears the Search Box ">
+                        clear
+                    </button>
+
+                    <button  id="ScanItem"
+                        class="btn btn-lg"
+                        onclick="scanInputForm()"
+                        data-toggle="tooltip"
+                        title="scan an item tag">
+                        scan item
+                    </button>
+
+                    <span id="status">STATUS</span>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-xs-6" >
+                <div id='listheader' class="itemlist" align="center">
+                    RESULTS
+                </div>
+                <br>
+                <div id="result"
+                    align="center"
+                    class=" itembackground" >
+                    <div id="resultEnd" align="center">
+                        <h1>LOADING DATABASE</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div  class="itemlist" align="center">
+                    <div id="time"
+                        align="center"
+                        data-toggle="tooltip"
+                        title="Current Time on Your Computer">
+                    </div>
+                </div>
+                <br>
+                <div id="weather"
+                    class="itemlist"
+                    align="center"
+                    onclick="weather()"
+                    data-toggle="tooltip"
+                    title="Current Weather From Wunderground.com">
+                </div>
+                <br>
+                <div id="calc"
+                    class="itemlist"
+                    data-toggle="tooltip"
+                    title="Type an Expression and Press Enter to Evaluate">
+                        <input id="calculator"
+                            ondblclick="this.value='';"
+                            onchange="this.value =eval(this.value)"
+                            placeholder="Calculator"
+                            width="parent">
+                </div>
+                <br>
+                <div class="itemlist calendar-container">
+                <div id="calendar"
+                    align="center"
+                    data-toggle="tooltip"
+                    title="Google Calendar"></div>
+                    </div>
+                <br>
+
+                <div id="note"
+                    class="itemlist"
+                    align="center"
+                    data-toggle="tooltip"
+                    title="Notes are saved automatically">
+                        Notes:
+                        <br>
+                    <div id="notes"></div>
+                </div>
+                <br>
+                <div id="upc search"
+                    class="itemlist"
+                    align="center"
+                    data-toggle="tooltip"
+                    title="Type or Scan a UPC Code">
+                    <input id="upctext"
+                        onchange="getUpcData(this.val())"
+                        placeholder="UPC Search"
+                        name="search"
+                        Size="5">
+                    <span>
+                        <button
+                            class="btn btn-lg"
+                            onclick="$('#upctext').val('')" >
+                            clear
+                        </button>
+                    </span>
+                </div>
+                <br>
+                <div id="upcdata">
+                    <div class="itemlist">
+                        <h1>UPC Data</h1>
+                    </div>
+                </div>
+            </div> <!-- col md-6 -->
+        </div>  <!-- row -->
+    </div> <!-- container -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/nedb.js" charset="utf-8"></script>
+    <script src="./js/jquery.e-calendar.js"></script>
+    <script src="./js/main.js" charset="utf-8"></script>
+</body>
+</html>
+SKtsdma12##

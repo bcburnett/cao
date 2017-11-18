@@ -1,0 +1,124 @@
+html *
+{
+   font-size: 1.1em ;
+   color: #000 ;
+   font-family: Arial ;
+}
+span{
+  vertical-align: text-top;
+  opacity: 1.0
+  color: black;
+
+}
+head{}
+
+title{}
+
+body {
+    padding-top: 65px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../Leaves.svg");
+    background-attachment: fixed;
+    background-blend-mode:
+
+}
+
+nav{
+    position:absolute; top:20px; left:30px;
+}
+
+#info{
+  display:block;
+   width : 20%
+}
+
+div.itemlist {
+  background-color: lightgreen;
+    border: 10px solid green  ;
+  border-style: outset;
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  /*width : 500px;*/
+
+}
+
+div.itembackground {
+    border: 10px solid green  ;
+  border-style: outset;
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  /*width : 500px;*/
+
+}
+
+div.comments {
+  background-color: lightyellow;
+
+}
+
+#result {
+  /*width: 526px;*/
+
+
+}
+#notesinput {
+  width: 95%;
+  height: 300px
+}
+input,  textarea {
+  align: center
+  box-shadow: 0px 3px 10px #888888;
+  border-radius: 10px;
+  background-color: lightyellow;
+  width: 75%;
+
+
+}
+
+input#txt {
+ width:15%;
+
+}
+
+Button {
+  border-radius: 10px;
+
+}
+
+div.item {
+
+   /*background-color: lightgreen;*/
+    border: 1px solid green  ;
+/*width : 488px;*/
+  border-radius: 10px;
+  margin: 10px,10px,10px,10px;
+  text-align: center;
+}
+div.itemHeader{
+    text-align: left;
+    background-color: #669999;
+    border-radius: 10px;
+
+}
+
+.expand {
+font-weight: bold;
+font-style: italic;
+font-size: 11px;
+cursor: pointer;
+}
+.expandable {
+
+}
+#calendar-container {
+    height: 450px;
+}
+#calendar{
+    height: 400px;
+
+}
